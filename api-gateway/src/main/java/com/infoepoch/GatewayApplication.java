@@ -6,18 +6,16 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
 @EnableHystrix
 @EnableHystrixDashboard
-@EnableZuulProxy
 @SpringCloudApplication
 public class GatewayApplication {
 
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(GatewayApplication.class).web(true).run(args);
-	}
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(GatewayApplication.class).run(args);
+    }
 
 //	@Bean
 //	public AccessFilter accessFilter() {
